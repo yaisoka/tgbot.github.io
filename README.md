@@ -10,7 +10,6 @@
         <img src="https://static.thenounproject.com/png/1026632-200.png">
         <p>Тут описание</p>
         <button id="ok">Согласен</button>
-
     </div>
 </body>
 </html>
