@@ -8,8 +8,7 @@
     <title>MADEBYXXX</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
-        
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box
@@ -31,8 +30,7 @@
         }
         img {
             width: 70px;
-            margin: 30px auto;
-            
+            margin: 30px auto;   
         }
         p {
             width: 350px;
